@@ -23,7 +23,36 @@ This project aims to leverage geospatial data collected from farmers' mobile dev
    - Aggregate the machinery usage data to estimate the total machinery usage time for different plots.
    - Provide summary statistics and visualizations for better decision-making regarding machinery allocation and usage optimization.
 
+# Geospatial Data Preparation and Attribute-Based Clustering
 
+## Steps
+
+1. **Data Loading**
+   - Load the geospatial dataset into the analysis environment to begin the process.
+
+2. **Excel to CSV Conversion and Integration with NQGIS Mapping Tool**
+   - Convert the dataset from Excel format to CSV format for better compatibility.
+   - Integrate the CSV dataset with the NQGIS mapping tool to enable visualization and mapping.
+
+3. **Formatting the Date-Time Field**
+   - Use the Field Calculator to manipulate the date-time field in the dataset.
+   - Apply the to_date(whatsspa) function to convert the date-time data into the desired format for analysis.
+
+4. **Attribute-Based Clustering using stDBSCAN Algorithm**
+   - Implement the stDBSCAN clustering algorithm for attribute-based clustering.
+   - Specify relevant attributes to identify distinct clusters within the dataset.
+
+5. **Polygon Generation - Minimum Bounding Geometry and Convex Hull**
+   - Generate minimum bounding geometry to determine the minimum area polygon for each cluster.
+   - Calculate the convex hull to obtain the smallest convex polygon enclosing the cluster points.
+
+6. **Attribute Extraction - Area and Perimeter**
+   - Retrieve pre-existing attribute information on area and perimeter from the dataset.
+   - Utilize this attribute data without requiring additional calculations.
+
+7. **Centroid Calculation using Vector Geometric Tools**
+   - Apply vector geometric tools to determine the centroid for each cluster.
+   - Calculate the centroid as a representative point that lies at the center of gravity of the cluster.
 
 ### Contribution and Feedback
 
